@@ -8,12 +8,15 @@ Gem::Specification.new do |gem|
   gem.version       = Apache::Log::VERSION
   gem.authors       = ["Fabian Becker"]
   gem.email         = ["halfdan@xnorfz.de"]
-  gem.description   = %q{Helper library for managing, parsing and generating Apache log files (or nginx)}
-  gem.summary       = %q{Helper library for managing, parsing and generating Apache log files (or nginx)}
+  gem.summary       = %q{Easily manage, parse and generate Apache/nginx log files}
   gem.homepage      = "http://github.com/halfdan/apache-log"
+  gem.description   = <<-DESC
+	Helper library for managing, parsing and generating Apache log files (or nginx)
+  DESC
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  gem.add_development_dependency "rspec", "~> 2.12.0"
 end
