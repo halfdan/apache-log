@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+
+require 'apache-log/generator'
+require 'optparse'
+
+options = {}
+OptionParser.new do |opts|
+	opts.on("-o", "--output [File]", "Output File") do |file|
+		options[:outfile] = file
+	end
+  
+	opts.on("-n", "--lines [k]", "Generate k log lines") do |lines|
+		options[:lines] = lines
+	end
+
+	opts.on("-h", "--hostname [host]", "Hostname of generated visits") do |hostname|
+		options[:hostname] = hostname
+	end
+
+	opts.on("-u", "--user-agents [File]", "Read User-Agent list from file") do |file|
+		options[:user_agents] = file
+	end
+end.parse!
