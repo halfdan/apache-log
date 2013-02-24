@@ -8,9 +8,9 @@ Gem::Specification.new do |gem|
   gem.version       = Apache::Log::VERSION
   gem.authors       = ["Fabian Becker"]
   gem.email         = ["halfdan@xnorfz.de"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{Helper library for managing, parsing and generating Apache log files (or nginx)}
+  gem.summary       = %q{Helper library for managing, parsing and generating Apache log files (or nginx)}
+  gem.homepage      = "http://github.com/halfdan/apache-log"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
